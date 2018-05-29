@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="right"
+    android:background="@color/colorBackground"
+    tools:context="com.example.kim.goldentime.ContactFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="159dp"
+            android:layout_height="36dp"
+            android:layout_gravity="left"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:text="새로운 연락처를 등록해보세요."
+            android:gravity="center"
+            android:layout_weight="0.92" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:id="@+id/contactaddButton"
+            android:text="추가"
+            android:textColor="#ffffff"
+            android:textSize="12dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="23dp"
+
+            android:drawableTop="@drawable/ic_person_add_black_24dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/contact">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/contactListView"
+            android:layout_margin="10dp"
+            android:dividerHeight="2dp"
+            android:divider="#FFFFFF">
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>
+

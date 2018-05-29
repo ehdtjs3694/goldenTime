@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<item
+    android:id="@+id/contactButton"
+    android:checked="true"
+    android:icon="@drawable/ic_supervisor_account_black_24dp"
+    android:title="@string/title_contact"
+    app:showAsAction="ifRoom"/>
+
+<item
+    android:id="@+id/heartButton"
+    android:checked="false"
+    android:icon="@drawable/ic_favorite_black_24dp"
+    android:title="@string/title_heart"
+    app:showAsAction="ifRoom"/>
+
+<item
+    android:id="@+id/optionButton"
+    android:checked="false"
+    android:icon="@drawable/ic_settings_black_24dp"
+    android:title="@string/title_option"
+    app:showAsAction="ifRoom"/>
+</menu>

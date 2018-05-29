@@ -1,0 +1,199 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context="com.example.kim.goldentime.HeartFragment"
+
+    android:weightSum="1">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:orientation="vertical"
+            android:background="@color/colorBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorBackground"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ProgressBar
+                        android:layout_width="230dp"
+                        android:layout_height="230dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:indeterminateDrawable="@drawable/circular"
+                        android:max="100"
+                        android:progress="20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textProgress"
+                        android:layout_alignLeft="@id/progressBar" android:layout_alignTop="@id/progressBar"
+                        android:layout_alignRight="@id/progressBar" android:layout_alignBottom="@id/progressBar"
+                        android:background="@android:color/transparent"
+                        android:text="심장박동 측정중.."
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <ToggleButton
+                    android:id="@+id/button_heart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textOn="측정 중지"
+                    android:textOff="측정 시작"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:background="@color/colorBackground"
+                    android:drawableTop="@drawable/ic_favorite_black_24dp"
+                    android:layout_above="@+id/button_battery"
+                    android:layout_toEndOf="@+id/button_battery"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/heartRateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="현재 심박수 : 0 BPM"
+                    android:textColor="@color/colorWarning"
+                    android:layout_gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_below="@+id/batteryText"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentStart="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="배터리"
+            android:textColor="#000000"
+            android:background="@color/colorBackground"
+            android:drawableTop="@drawable/ic_battery_full_black_24dp"
+            android:layout_alignBaseline="@+id/button_AED"
+            android:layout_alignBottom="@+id/button_AED" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="0 % Battery"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:id="@+id/batteryText"
+            android:gravity="center"
+            android:background="@color/colorBackground"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/maxCnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:text="최대 수치 : "
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/minCnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:text="최소 수치 : "
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/vibration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:text="진동 제한 수 : "
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:id="@+id/aedMapLinearLayout"
+        android:layout_weight="0.52">
+
+        <Button
+            android:id="@+id/button_AED"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circularbutton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:drawableTop="@drawable/ic_location_on_black_24dp"
+            android:text="AED"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/colorBackground"
+        android:layout_weight="0.67">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="정보"
+            android:textSize="15dp"
+            android:drawableLeft="@drawable/ic_live_help_black_24dp"
+            android:drawableStart="@drawable/ic_live_help_black_24dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/heartRateInfomation"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context="com.example.kim.goldentime.OptionFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="심장박동수 제한"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/minText"
+                android:textSize="20dp"
+                android:textColorHint="#ffffff"
+                android:hint="최소 수치"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/heartMin"
+                android:textColor="@color/colorWarning"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="최소 수치 : 50 BPM"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/maxText"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+                android:hint="최대 수치"
+                android:textColorHint="#ffffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/heartMax"
+                android:textColor="@color/colorWarning"
+                android:textStyle="bold"
+                android:text="최대 수치 : 120 BPM"
+                android:textSize="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="진동 수 제한"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/vibeText"
+                android:textColorHint="#ffffff"
+                android:hint="진동 제한 수"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="진동 제한 : 5 번"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/heartVib"
+                android:textColor="@color/colorWarning"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="저장"
+                android:textColor="#ffffff"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/optionSaveButton"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

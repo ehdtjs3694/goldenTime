@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="김동선"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/nameText"
+            android:drawableStart="@drawable/ic_perm_identity_black_24dp"
+            android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+            android:background="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_weight="1.45" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/contactupdateButton"
+            android:text="수정"
+            android:textColor="#FFFFFF"
+            android:textSize="12dp"
+            android:background="@color/colorPrimary"
+            android:layout_weight="0.01"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:drawableTop="@drawable/ic_sync_black_24dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="010-5309-9596"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:id="@+id/telText"
+            android:layout_weight="0.35" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/contactdeleteButton"
+            android:text="삭제"
+            android:textColor="#FFFFFF"
+            android:textSize="12dp"
+            android:layout_weight="0.03"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:drawableTop="@drawable/ic_content_cut_black_24dp"/>
+
+    </LinearLayout>
+</LinearLayout>
